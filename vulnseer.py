@@ -818,7 +818,8 @@ class VulnerabilityScanner:
         
         return None
 
-gumentParser(description="AI-Powered Vulnerability Scanner")
+def main():
+    parser = argparse.ArgumentParser(description="AI-Powered Vulnerability Scanner")
     parser.add_argument("targets", help="Target IP/CIDR/hostname or file containing targets")
     parser.add_argument("--ports", "-p", help="Port specification (e.g., '22,80,443' or '1-1000')")
     parser.add_argument("--openai-key", help="OpenAI API key")
@@ -859,7 +860,7 @@ gumentParser(description="AI-Powered Vulnerability Scanner")
         print("  pip install openai anthropic requests")
         print("\nExample usage:")
         print("  python3 vuln-scanner.py 192.168.1.0/24 --openai-key YOUR_KEY")
-        return
+        #return
     
     print(f"Using {len(providers)} AI provider(s)")
     
