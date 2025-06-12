@@ -818,6 +818,7 @@ class VulnerabilityScanner:
         
         return None
 
+def main():
     parser = argparse.ArgumentParser(description="AI-Powered Vulnerability Scanner")
     parser.add_argument("targets", help="Target IP/CIDR/hostname or file containing targets")
     parser.add_argument("--ports", "-p", help="Port specification (e.g., '22,80,443' or '1-1000')")
